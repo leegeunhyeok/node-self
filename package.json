@@ -1,16 +1,8 @@
 {
   "name": "node-self",
-  "version": "1.0.0",
+  "version": "1.0.0-a",
   "description": "self property in Node.js",
-  "main": "dist/self.umd.js",
-  "module": "dist/self.esm.js",
-  "unpkg": "dist/self.min.js",
-  "scripts": {
-    "build": "npm run build:umd && npm run build:es && npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/self.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/self.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/self.min.js"
-  },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leegeunhyeok/node-self.git"
@@ -20,12 +12,5 @@
   "bugs": {
     "url": "https://github.com/leegeunhyeok/node-self/issues"
   },
-  "homepage": "https://github.com/leegeunhyeok/node-self#readme",
-  "devDependencies": {
-    "eslint": "^7.0.0",
-    "rollup": "^2.9.1",
-    "rollup-plugin-buble": "^0.19.8",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-terser": "^5.3.0"
-  }
+  "homepage": "https://github.com/leegeunhyeok/node-self#readme"
 }

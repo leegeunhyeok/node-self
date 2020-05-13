@@ -22,7 +22,6 @@ console.log(self) // ReferenceError: self is not defined
 
 You can use `self` property in Node.js.
 
-- Three lines magic
 - Super light weight
 - Safe
 - No more bugs
@@ -31,10 +30,14 @@ You can use `self` property in Node.js.
 
 Just using `self`. It's returns appropriate `Global Object` (Context Dependent)
 
-Import [index.js](./index.js)
-```
-```
+Import [index.js](./index.js) or paste this code on the top
 
+```javascript
+!function () {
+  typeof self !== 'object' && !!typeof global
+    ? global.self = global : void null
+}()
+```
 
 There are can be `self` (Global Object)
 
