@@ -1,6 +1,6 @@
 {
   "name": "node-self",
-  "version": "1.0.0-a",
+  "version": "1.0.0-b",
   "description": "self property in Node.js",
   "main": "index.js",
   "repository": {
