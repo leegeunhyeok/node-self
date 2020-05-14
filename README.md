@@ -23,18 +23,33 @@ console.log(self) // ReferenceError: self is not defined
 You can use `self` property in Node.js.
 
 - Super light weight
+- Pure Javascript
+- Zero dependency
 - Safe
+- No Bundler/Transfiler/Other
 - No more bugs
+
+### Compatibility
+
+Both Browser and Node.js.
 
 ## How to use?
 
-Just using `self`. It's returns appropriate `Global Object` (Context Dependent)
+Just use `self`. It's returns appropriate `Global Object` (Context Dependent)
 
-Import [index.js](./index.js) or paste this code on the top
+Import [index.js](./index.js)
+```javascript
+// CommonJS
+require('node-self')
 
+// ES6+
+import 'node-self'
+```
+
+or paste this code on the top
 ```javascript
 !function () {
-  typeof self !== 'object' && !!typeof global
+  typeof self !== 'object' && typeof global === 'object'
     ? global.self = global : void null
 }()
 ```
@@ -64,6 +79,8 @@ self === global // true
 
 ## History
 
+- 2020.05.14: Fix condition, Update document (v1.0.0-b)
+- 2020.05.13: Fix condition (v1.0.0-a)
 - 2020.05.13: First Release (v1.0.0)
 
 ## License
