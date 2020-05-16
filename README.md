@@ -1,6 +1,10 @@
 # node-self
 🤙 self property in Node.js
 
+[![npm version](https://img.shields.io/npm/v/node-self.svg?maxAge=2592000)](https://badge.fury.io/js/node-self)
+[![npm version](https://img.shields.io/npm/dt/node-self.svg)](https://badge.fury.io/js/node-self)
+
+
 ## What is this?
 
 You can use `self` property in Node.js via this module.
@@ -48,9 +52,9 @@ import 'node-self'
 
 or paste this code on the top
 ```javascript
-!function () {
-  typeof self !== 'object' && typeof global === 'object'
-    ? global.self = global : void null
+void !function () {
+  typeof self === 'undefined' && typeof global === 'object'
+    ? global.self = global : null
 }()
 ```
 
@@ -79,6 +83,7 @@ self === global // true
 
 ## History
 
+- 2020.05.16: Update code (v1.0.0-c)
 - 2020.05.14: Fix condition, Update document (v1.0.0-b)
 - 2020.05.13: Fix condition (v1.0.0-a)
 - 2020.05.13: First Release (v1.0.0)

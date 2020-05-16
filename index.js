@@ -1,4 +1,4 @@
-!function () {
-  typeof self !== 'object' && typeof global === 'object'
-    ? global.self = global : void null
+void !function () {
+  typeof self === 'undefined' && typeof global === 'object'
+    ? global.self = global : null
 }()
