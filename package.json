@@ -3,6 +3,7 @@
   "version": "1.0.0-c",
   "description": "self property in Node.js",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leegeunhyeok/node-self.git"
