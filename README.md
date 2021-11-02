@@ -2,7 +2,7 @@
 🤙 self property in Node.js
 
 [![npm version](https://img.shields.io/npm/v/node-self.svg?maxAge=2592000)](https://badge.fury.io/js/node-self)
-[![npm version](https://img.shields.io/npm/dt/node-self.svg)](https://badge.fury.io/js/node-self)
+[![npm downloads](https://img.shields.io/npm/dt/node-self.svg)](https://badge.fury.io/js/node-self)
 
 
 ## What is this?
@@ -30,7 +30,7 @@ You can use `self` property in Node.js.
 - Pure Javascript
 - Zero dependency
 - Safe
-- No Bundler/Transfiler/Other
+- No Bundler/Transpiler/Other things
 - No more bugs
 
 ### Compatibility
@@ -83,6 +83,8 @@ self === global // true
 
 ## History
 
+- 2021.11.02 (v1.0.0-d)
+  - Fix module import issue in typescript [#1](https://github.com/leegeunhyeok/node-self/pulls) ([@yskszk63](https://github.com/yskszk63))
 - 2020.05.16: Update code (v1.0.0-c)
 - 2020.05.14: Fix condition, Update document (v1.0.0-b)
 - 2020.05.13: Fix condition (v1.0.0-a)
