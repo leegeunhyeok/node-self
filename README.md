@@ -4,6 +4,14 @@
 [![npm version](https://img.shields.io/npm/v/node-self.svg?maxAge=2592000)](https://badge.fury.io/js/node-self)
 [![npm downloads](https://img.shields.io/npm/dt/node-self.svg)](https://badge.fury.io/js/node-self)
 
+## Table of contents
+
+- [Features](#features)
+- [Compatibility](#compatibility)
+- [How to use?](#how-to-use)
+- [How it works?](#how-it-works)
+- [Changelog](#changelog)
+- [License](#license)
 
 ## What is this?
 
@@ -20,9 +28,9 @@ console.log(self) // DedicatedWorkerGlobalScope { ... }
 console.log(self) // ReferenceError: self is not defined
 ```
 
-> Why?: `self` property is not implement in Node.js.
+> Why?: `self` property is not implemented in Node.js.
 
-## Feature
+## Features
 
 You can use `self` property in Node.js.
 
@@ -53,7 +61,7 @@ import 'node-self'
 or paste this code on the top
 ```javascript
 void !function () {
-  typeof self === 'undefined' && typeof global === 'object'
+  typeof self == 'undefined' && typeof global == 'object'
     ? global.self = global : null
 }()
 ```
@@ -81,8 +89,27 @@ self === window // true
 self === global // true
 ```
 
-## History
+## How it works?
 
+This project using `typeof` operator trickly.
+
+`typeof` operator always return a string.
+Even with undeclared identifiers, it will return `'undefined'` instead of throwing an error.
+
+```js
+undeclared; // ReferenceError: undeclared is not defined
+
+typeof undeclared // 'undefined'
+```
+
+- [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#interaction_with_undeclared_and_uninitialized_variables)
+- [ECMA-262 Spec](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-typeof-operator)
+
+## Changelog
+
+- 2022.09.29 (v1.0.1)
+  - Change to loose equality comparison because, typeof operator is always return string value.
+  - Now following [Semantic Versioning](https://semver.org)
 - 2021.11.02 (v1.0.0-d)
   - Fix module import issue in typescript [#1](https://github.com/leegeunhyeok/node-self/pulls) ([@yskszk63](https://github.com/yskszk63))
 - 2020.05.16: Update code (v1.0.0-c)
