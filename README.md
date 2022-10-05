@@ -1,7 +1,7 @@
 # node-self
 🤙 self property in Node.js
 
-[![npm version](https://img.shields.io/npm/v/node-self.svg?maxAge=2592000)](https://badge.fury.io/js/node-self)
+[![npm version](https://img.shields.io/npm/v/node-self.svg?maxAge=86400)](https://badge.fury.io/js/node-self)
 [![npm downloads](https://img.shields.io/npm/dt/node-self.svg)](https://badge.fury.io/js/node-self)
 
 ## Table of contents
