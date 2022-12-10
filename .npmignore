@@ -114,3 +114,6 @@ build/
 
 # Origin
 index.js
+
+# Test
+__tests__
