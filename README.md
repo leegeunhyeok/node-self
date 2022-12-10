@@ -33,12 +33,9 @@ console.log(self); // ReferenceError: self is not defined
 
 You can use `self` property in Node.js.
 
-- Super light weight
+- Super lightweight
 - Pure Javascript
-- Zero dependency
-- Safe
-- No Bundler/Transpiler/Other things
-- No more bugs
+- Zero dependencies
 
 ### Compatibility
 
@@ -60,8 +57,9 @@ import 'node-self';
 or paste this code on the top
 ```javascript
 void !function () {
-  typeof self == 'undefined' && typeof global == 'object'
-    ? global.self = global : null
+  typeof self == 'undefined'
+    && typeof global == 'object'
+    && (global.self = global);
 }();
 ```
 
@@ -75,8 +73,6 @@ There are can be `self` (Global Object)
     - ServiceWorkerGlobalScope
 - Node.js
   - global
-
-
 
 ```javascript
 self;
@@ -103,6 +99,12 @@ typeof undeclared; // 'undefined'
 
 - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#interaction_with_undeclared_and_uninitialized_variables)
 - [ECMA-262 Spec](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-typeof-operator)
+
+---
+
+- `typeof self == 'undefined'`: Check existing `self` identifier (should be undefined)
+- `typeof global == 'object'`: Check current context is Node.js
+- `global.self = global`: Define `self` and assign reference of global object
 
 ## License
 
