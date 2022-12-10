@@ -4,6 +4,9 @@
   "description": "self property in Node.js",
   "main": "index.js",
   "types": "index.d.ts",
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leegeunhyeok/node-self.git"
@@ -13,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/leegeunhyeok/node-self/issues"
   },
-  "homepage": "https://github.com/leegeunhyeok/node-self#readme"
+  "homepage": "https://github.com/leegeunhyeok/node-self#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }
